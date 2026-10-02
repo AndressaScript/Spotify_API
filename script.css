@@ -1,0 +1,170 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0f10;
+    color: #ffffff;
+    margin: 0;
+    padding: 40px 24px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0 28px;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+h1 span {
+    color: #1ed760;
+}
+
+header p {
+    color: #a7b5c2;
+    font-size: 17px;
+}
+
+#formBusca {
+    display: flex;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 6px;
+    border: 2px solid #1ed760;
+    border-radius: 40px;
+    background: #11191c;
+}
+
+#nomeArtista {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+}
+
+#nomeArtista::placeholder {
+    color: #81909c;
+}
+
+button {
+    background: #1ed760;
+    color: #07140b;
+    border: none;
+    padding: 13px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #1fef70;
+}
+
+#mensagem {
+    text-align: center;
+    margin: 20px 0 35px;
+    color: #1ed760;
+    min-height: 20px;
+}
+
+.secao-albuns h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+#listaUsuarios {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#listaUsuarios article {
+    background: linear-gradient(145deg, #121a1e, #0e1316);
+    border: 1px solid #202b30;
+    padding: 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#listaUsuarios article:hover {
+    background: #1a2529;
+    transform: translateY(-3px);
+}
+
+#listaUsuarios article img {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto 14px;
+}
+
+#listaUsuarios article h2 {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    overflow-wrap: anywhere;
+}
+
+#listaUsuarios article p {
+    font-size: 13px;
+    color: #a7b5c2;
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+    #listaUsuarios {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 24px 14px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    #listaUsuarios {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    #listaUsuarios article {
+        padding: 10px;
+    }
+
+    #formBusca button {
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    #listaUsuarios {
+        grid-template-columns: 1fr;
+    }
+}

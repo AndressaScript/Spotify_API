@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Álbuns - Spotify</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>Buscador de <span>Álbuns</span></h1>
+            <p>Explore os álbuns do seu artista favorito</p>
+        </header>
+
+        <div style="text-align: center;">
+            <button onclick="carregarAlbuns()">Carregar Álbuns</button>
+        </div>
+
+        <p id="mensagem">
+            Clique no botão para carregar os álbuns.
+        </p>
+
+        <section class="secao-albuns">
+
+            <h2>Álbuns encontrados</h2>
+
+            <section id="listaUsuarios"></section>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
